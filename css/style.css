@@ -34,7 +34,7 @@ html{
     to {background-position:10000px 0;}
 }
 
-.stars, .twinkling, .clouds {
+.stars, .twinkling,{
   position:absolute;
   top:0;
   left:0;
@@ -45,17 +45,6 @@ html{
   display:block;
 }
 
-.stars {
-  background:#000 url("https://github.com/JohnnieGo/Zagadkowa-mysz/blob/3013a2a1bebed4bdebad214ba48b95547e7c3df0/css/Pictures/stars.png") repeat top center;
-  z-index:0;
-}
-
-.twinkling{
-  background:transparent url("https://github.com/JohnnieGo/Zagadkowa-mysz/blob/595f89fb628c9b3276beb456a85d5c4344bb9f97/Pictures/twinkling.png") repeat top center;
-  z-index:1;
-  animation:move-twink-back 200s linear infinite;
-  z-index: 0;
-}
 
 /* Main */
 
