@@ -51,7 +51,7 @@ html{
 }
 
 .twinkling{
-  background:transparent url(/Pictures/twinkling.png) repeat top center;
+  background:transparent url("https://github.com/JohnnieGo/Zagadkowa-mysz/blob/595f89fb628c9b3276beb456a85d5c4344bb9f97/Pictures/twinkling.png") repeat top center;
   z-index:1;
   animation:move-twink-back 200s linear infinite;
   z-index: 0;
