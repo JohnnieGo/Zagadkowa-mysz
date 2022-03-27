@@ -46,7 +46,7 @@ html{
 }
 
 .stars {
-  background:#000 url(Pictures/stars.png) repeat top center;
+  background:#000 url("Pictures/stars.png") repeat top center;
   z-index:0;
 }
 
