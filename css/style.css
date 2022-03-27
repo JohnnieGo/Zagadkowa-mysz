@@ -1,0 +1,658 @@
+html{
+    cursor: url("Pictures/MouseCoursor.png"), auto;
+}
+ 
+ /* background */
+ 
+ body{
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    
+}
+
+.title h1{
+
+    color:#ffffff;
+    background: -webkit-linear-gradient(#eee, #333);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 6px 6px 0px rgba(0,0,0,0.2);
+
+    display:block;
+    position: relative;
+    z-index: 3;
+}
+
+@keyframes move-twink-back {
+    from {background-position:0 0;}
+    to {background-position:-10000px 5000px;}
+}
+
+@keyframes move-clouds-back {
+    from {background-position:0 0;}
+    to {background-position:10000px 0;}
+}
+
+.stars, .twinkling, .clouds {
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  width:100%;
+  height:100%;
+  display:block;
+}
+
+.stars {
+  background:#000 url(/Pictures/stars.png) repeat top center;
+  z-index:0;
+}
+
+.twinkling{
+  background:transparent url(/Pictures/twinkling.png) repeat top center;
+  z-index:1;
+  animation:move-twink-back 200s linear infinite;
+  z-index: 0;
+}
+
+/* Main */
+
+/* Coming back to galaxy view */
+
+#overviewButton{
+    width: 100px;
+    height: 50px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 10;
+    color: white;
+    background-color: transparent;
+    border: none;
+    font-family: 'Roboto', sans-serif;
+    
+
+
+}
+
+/* hint info */
+
+.hint{
+    position: absolute;
+    bottom: 0px;
+    left: 5px;
+    z-index: 10;
+}
+
+/* Class for links in text: */
+
+.linkToAnotherPage{
+    text-decoration: none;
+    color: #fcd000;
+    cursor: pointer;
+}
+
+.linkToAnotherPage:hover{
+    color: aqua;
+}
+
+/* Text options */
+
+h0 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 90px;
+    color: white;
+}
+
+h1 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 60px;
+    color: white;
+}
+
+h2 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    color: white;
+    font-weight: 300;
+}
+h4 {
+    font-size: 30px;
+    line-height: 40px;
+    font-family: 'IM Fell English SC', serif;
+    color: white;
+}
+
+h5{
+    font-family: 'Merriweather', serif;
+    font-size: 30px;
+    line-height: 40px;
+    color: white;
+}
+
+p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    color: white;
+}
+
+span {
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    color: white;
+}
+
+a {
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    color: white;
+}
+
+/* Toolbar position */
+
+#impress-toolbar{
+    position: absolute;
+    z-index: 10;
+    right: 0px;
+    bottom: 0px;
+}
+
+.step{
+    z-index: 10;
+}
+
+/* Slides */
+
+#SlajdPoczatkowy{
+    width: 900px;
+    height: 600px;
+    z-index: 10;
+    perspective: 200px;
+}
+
+#SPTekst{
+    padding-top: 300px;
+    height: 600px;
+    position: relative;
+    bottom: 50px;
+    font-family: sans-serif;
+  font-size: 30px;
+  color: #fcd000;
+  font-weight: bold;
+  width: 600px;
+  margin: 0 auto;
+  transform: rotateX(30deg);
+  animation: animateCrawl 20s ease-in;
+}
+
+#SlajdPoczatkowy span { 
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  @keyframes animateCrawl {
+      0%   { transform: rotateX(30deg) translateY(300px); }
+      100% { transform: rotateX(30deg) translateY(-800px); }
+  }
+
+  @keyframes hide {
+    to {
+        opacity: 0;
+    }
+}
+
+#Informacje-o-Atarusie{
+    width: 800px;
+    height: 600px;
+    z-index: 1;
+    position: absolute;
+ 
+}
+
+
+#ByzantineLexicography{
+    display: none;
+}
+
+#Suidas:hover + #ByzantineLexicography{
+    height: 200px;
+    width: 200px;
+    display: block;
+    /* background-color:white; */
+    position: absolute;
+    right: -150px;
+    bottom: 0px;
+    transform: rotate(25deg);
+}
+
+/*Model Uniwersum Slide*/
+
+
+#hoverOverModelArat{
+    display: none;
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    right: -250px;
+    bottom: 250px;
+    transform: rotateY(-45deg) translateZ(100px);
+}
+
+
+/* Wizerunek-Aratusa-pic slide */
+
+#Wizerunek-Aratusa-pic-click{
+    display: none;
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    right: -250px;
+    bottom: 250px;
+    transform: translateZ(100px);
+}
+
+/* Planisfery slide */
+
+#PlanisferyMap{
+    width: 900px;
+    position: relative;
+}
+
+
+#PlanisferyLewa{
+    position: absolute;
+    top: 97px;
+    left: 28px;
+    width: 422px;
+    transform: rotate();
+    animation: rotation 50s infinite linear;
+}
+
+@keyframes rotation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(359deg);
+    }
+  }
+
+#PlanisferyPrawa{
+    position: absolute;
+    top: 93px;
+    right: 28px;
+    width: 422px;
+    animation: rotationLeft 50s infinite linear;
+}
+
+@keyframes rotationLeft {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(-359deg);
+    }
+  }
+
+#PlanisferyMap-pic-click{
+    display: none;
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    right: -200px;
+    bottom: 250px;
+    transform: translateZ(100px);
+}
+
+  /* Fenomena Kochanowskiego */
+
+#FenomenaKochanowskiego{
+    width: 900px;
+    height: 400px;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#AndrzejPatrycyNidecki{
+    display: none;
+}
+
+#AndrzejPatrycyNideckiHover:hover + #AndrzejPatrycyNidecki{
+    height: 200px;
+    width: 200px;
+    display: block;
+    /* background-color:white; */
+    position: absolute;
+    right: -200px;
+    bottom: 200px;
+    transform: rotate(25deg);
+}
+
+#LacinskiOryginal{
+    display: none;
+}
+
+#ZobaczLacinskiOryginal:hover + #LacinskiOryginal{
+    height: 200px;
+    width: 200px;
+    display: block;
+    position: absolute;
+    right: -200px;
+    bottom: 200px;
+    transform: rotate(25deg);
+}
+
+#DzielaZebraneWin{
+    display: none;
+}
+
+#DzielaZebrane:hover + #DzielaZebraneWin{
+    height: 200px;
+    width: 200px;
+    display: block;
+    position: absolute;
+    right: -200px;
+    bottom: 200px;
+    transform: rotate(25deg);
+}
+
+/* Tablica1 */
+#Tablica1{
+    width: 900px;
+    height: 600px;
+    z-index: 1;
+    position: relative;
+}
+
+#Tablica1Click{
+    display: none;
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    right: -200px;
+    bottom: 250px;
+    transform: translateZ(100px);
+}
+
+#FenomenyStałySię{
+    width: 900px;
+    height: 600px;
+    z-index: 1;
+}
+
+#FenomenyStałySięTekst{
+    width: 900px;
+    height: 100px;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Pierwsze wydanie slide */
+
+#Sekcja3{
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    position: absolute;
+    font-size: 80px;
+    width: 1500px;
+    left: -600px
+
+
+}
+
+#TekstPierwszeWydanie{
+    width: 900px;
+    height: 600px;
+    z-index: 1;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+#mice{
+    display: none;
+    position: absolute;
+    right: -350px;
+    bottom: 100px;
+    width: 300px;
+    transform: rotate(-45deg);
+}
+
+/* Dugie wydanie slide */
+#TekstDrugieWydanie{
+width: 900px;
+height: 600px;
+z-index: 1;
+position: relative;
+display: flex;
+flex-direction: column;
+align-items: flex-end;
+justify-content: flex-end;
+}
+
+#TadeuszMostowskiWin img{
+    width: 150px;
+}
+
+#TadeuszMostowskiWin{
+    display: none;
+}
+
+#TadeuszMostowskiButton:hover + #TadeuszMostowskiWin{
+position: absolute;
+height: 200px;
+width: 600px;
+/* background-color:white; */
+display:flex;
+top:-30px;
+right: 0px;
+}
+
+/* Trzecie wydanie slide */
+#TekstTrzecieWydanie{
+    width: 900px;
+    height: 600px;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+#StefanOkołówWin{
+    display: none;
+}
+
+#StefanOkołówButton:hover + #StefanOkołówWin{
+position: absolute;
+height: 200px;
+width: 600px;
+/* background-color:white; */
+display:flex;
+bottom: -100px;
+left: 0px;
+}
+
+/* Czwarte wydanie slide{ */
+    #TekstCzwarteWydanie{
+        width: 900px;
+        height: 600px;
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+    }
+
+    #JanLorentowiczWin{
+        display: none;
+    }
+
+    #JanLorentowiczButton:hover + #JanLorentowiczWin{
+        position: absolute;
+        height: 100px;
+        width: 600px;
+        /* background-color:white; */
+        display:flex;
+        bottom: 20px;
+        right: 0px;
+        align-items: center;
+    }
+
+/* Krzyżanowski */
+
+#Sekcja4{
+    transform: rotateX(180deg);
+    position: absolute;
+    top: -300px;
+}
+
+#Krzyżanowski{
+    width: 900px;
+    height:600px;
+
+}
+
+/* Krzyżanowski-tekst */
+
+#Krzyżanowski-tekst{
+    width: 900px;
+    height: 600px;
+    position: relative;
+}
+
+#KrzyżanowskiWin{
+   display: none; 
+}
+
+#KrzyżanowskiButton:hover + #KrzyżanowskiWin{
+    position: absolute;
+    display: block;
+    height: 200px;
+    width: 200px;
+    right: -200px;
+    bottom: 250px;
+}
+
+/* Axer */
+
+#Axer{
+    width: 900px;
+    height: 600px;
+}
+
+
+#AxerGal{
+    width: 1000px;
+    height: 700px;
+}
+
+/* Slider */
+
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+  }
+  
+  /* Hide the images by default */
+.mySlides {
+    display: none;
+  }
+  
+  /* Next & previous buttons */
+.prevbtn, .nextbtn {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 48px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    z-index: 10;
+  }
+  
+  /* Position the "next button" to the right */
+    .nextbtn {
+        right: 0;
+        border-radius: 3px 0 0 3px;
+    }
+
+  
+  /* On hover, add a black background color with a little bit see-through */
+  
+  /* Caption text */
+  .slideshow-container .text {
+    color: #f2f2f2;
+    font-size: 22px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  /* Number text (1/3 etc) */
+  .slideshow-container  .numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+  
+  /* The dots/bullets/indicators */
+  .slideshow-container  .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  
+  .slideshow-container .active, .dot:hover {
+    background-color: #717171;
+  }
+  
+  /* Fading animation */
+  .slideshow-container .fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+
+  /* Jerzy Axer */
+
+#JerzyAxerWin{
+display: none}
+
+#JerzyAxerWin{
+    width: 50px;
+}
+
+#JerzyAxerButton:hover + #JerzyAxerWin{
+    height: 200px;
+    width: 200px;
+    display: block;
+    /* background-color:white; */
+    position: absolute;
+    right: -200px;
+    bottom: 300px;
+}
