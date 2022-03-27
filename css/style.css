@@ -46,7 +46,7 @@ html{
 }
 
 .stars {
-  background:#000 url("/Pictures/stars.png") repeat top center;
+  background:#000 url("https://github.com/JohnnieGo/Zagadkowa-mysz/blob/3013a2a1bebed4bdebad214ba48b95547e7c3df0/css/Pictures/stars.png") repeat top center;
   z-index:0;
 }
 
