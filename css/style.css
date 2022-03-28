@@ -134,7 +134,7 @@ a {
   width: 600px;
   margin: 0 auto;
   transform: rotateX(30deg);
-  animation: animateCrawl 20s ease-in;
+  animation: animateCrawl 35s ease-in;
 }
 
 #SlajdPoczatkowy span { 
